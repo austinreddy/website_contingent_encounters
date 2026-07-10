@@ -1,0 +1,288 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+
+    min-height:100vh;
+
+    background-image:url("../img/glass.jpeg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    overflow:hidden;
+
+}
+
+/* Darken the background */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    z-index:-2;
+
+}
+
+/* Entire page */
+
+.page{
+
+    position:relative;
+
+    width:100vw;
+    height:100vh;
+
+}
+
+/* Shared panel style */
+
+.panel{
+
+    background:rgba(0,0,0,.82);
+
+    border:2px solid white;
+
+    border-radius:16px;
+
+    backdrop-filter:blur(8px);
+
+}
+
+/* ----------------------- */
+/* TOP NAVIGATION */
+/* ----------------------- */
+
+.topnav{
+
+    position:absolute;
+
+    top:45px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+    gap:80px;
+
+}
+
+.topnav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:14px 40px;
+
+    font-size:24px;
+
+}
+
+.topnav a:hover{
+
+    background:white;
+    color:black;
+
+}
+
+/* ----------------------- */
+/* ABOUT */
+/* ----------------------- */
+
+.about{
+
+    position:absolute;
+
+    right:45px;
+    top:45px;
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:12px 25px;
+
+    font-size:22px;
+
+}
+
+/* ----------------------- */
+/* LEFT MENU */
+/* ----------------------- */
+
+.library{
+
+    position:absolute;
+
+    left:80px;
+    top:180px;
+
+    width:240px;
+
+    padding:25px;
+
+}
+
+.library h2{
+
+    margin-bottom:20px;
+
+}
+
+.library ul{
+
+    list-style:none;
+
+    line-height:2;
+
+    font-size:22px;
+
+}
+
+
+/* ----------------------- */
+/* RIGHT MENU */
+/* ----------------------- */
+
+.right{
+
+    position:absolute;
+
+    right:80px;
+    top:250px;
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+}
+
+.right a{
+
+    width:160px;
+
+    text-align:center;
+
+    padding:20px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:22px;
+
+}
+
+.right a:hover{
+
+    background:white;
+    color:black;
+
+}
+
+/* ----------------------- */
+/* LOWER LEFT */
+/* ----------------------- */
+
+.blog{
+
+    position:absolute;
+
+    left:80px;
+    bottom:120px;
+
+    padding:18px 25px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:22px;
+
+}
+
+.mastodon{
+
+    position:absolute;
+
+    left:80px;
+    bottom:45px;
+
+    padding:16px 25px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:22px;
+
+}
+
+/* ----------------------- */
+/* LOWER CENTER */
+/* ----------------------- */
+
+.bottom{
+
+    position:absolute;
+
+    bottom:45px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+    gap:35px;
+
+}
+
+.bottom a{
+
+    padding:16px 35px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:22px;
+
+}
+
+.bottom a:hover{
+
+    background:white;
+    color:black;
+
+}
+
+/* ----------------------- */
+/* SIGNATURE */
+/* ----------------------- */
+
+.signature{
+
+    position:absolute;
+
+    right:80px;
+    bottom:55px;
+
+    text-align:right;
+
+    font-size:26px;
+
+    text-shadow:0 0 10px black;
+
+}
