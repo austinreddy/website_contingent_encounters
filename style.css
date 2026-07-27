@@ -1,6 +1,7 @@
 nav div ul {
 	display: none;
 	position: absolute;
+	top: 100%;
 	list-style: none;
 	margin: 0;
 	padding-top: 20px;
