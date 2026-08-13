@@ -23,7 +23,9 @@
 
   const layers = Array.from(document.querySelectorAll('.bg'));
   const slideDuration = 6000;
-  let photoIndex = 0;
+  const clockStorageKey = 'contingent-encounters-slideshow-start';
+  let slideshowStart = Date.now();
+  let photoIndex;
   let activeLayerIndex = 0;
 
   if (layers.length !== 2 || photos.length < 2) {
@@ -39,19 +41,55 @@
     });
   }
 
-  async function showNextPhoto() {
-    photoIndex = (photoIndex + 1) % photos.length;
+  try {
+    const savedStart = Number(window.sessionStorage.getItem(clockStorageKey));
+
+    if (Number.isFinite(savedStart) && savedStart <= Date.now()) {
+      slideshowStart = savedStart;
+    } else {
+      window.sessionStorage.setItem(clockStorageKey, String(slideshowStart));
+    }
+  } catch (error) {
+    // The slideshow still works if the browser blocks session storage.
+  }
+
+  function getClockPosition() {
+    const elapsed = Math.max(0, Date.now() - slideshowStart);
+
+    return {
+      index: Math.floor(elapsed / slideDuration) % photos.length,
+      remaining: slideDuration - (elapsed % slideDuration)
+    };
+  }
+
+  function scheduleNextPhoto() {
+    const { remaining } = getClockPosition();
+    window.setTimeout(showCurrentPhoto, remaining + 20);
+  }
+
+  async function showCurrentPhoto() {
+    const clockPosition = getClockPosition();
+
+    if (clockPosition.index === photoIndex) {
+      scheduleNextPhoto();
+      return;
+    }
+
     const nextLayerIndex = activeLayerIndex === 0 ? 1 : 0;
-    const nextPhoto = photos[photoIndex];
+    const nextPhoto = photos[clockPosition.index];
 
     await preloadPhoto(nextPhoto);
     layers[nextLayerIndex].style.backgroundImage = `url("${nextPhoto}")`;
     layers[nextLayerIndex].classList.add('is-active');
     layers[activeLayerIndex].classList.remove('is-active');
     activeLayerIndex = nextLayerIndex;
+    photoIndex = clockPosition.index;
 
-    window.setTimeout(showNextPhoto, slideDuration);
+    scheduleNextPhoto();
   }
 
-  window.setTimeout(showNextPhoto, slideDuration);
+  const initialClockPosition = getClockPosition();
+  photoIndex = initialClockPosition.index;
+  layers[activeLayerIndex].style.backgroundImage = `url("${photos[photoIndex]}")`;
+  scheduleNextPhoto();
 })();
