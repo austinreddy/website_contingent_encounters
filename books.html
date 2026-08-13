@@ -2,61 +2,125 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Books</title>
-	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Five Books | Contingent Encounters</title>
+	<link rel="stylesheet" href="style.css?v=20260813-2">
+	<style>
+		.books-body {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 90px 24px 48px;
+			color: white;
+		}
+
+		.books-home {
+			position: fixed;
+			top: 24px;
+			left: 24px;
+			z-index: 2;
+		}
+
+		.books-page {
+			box-sizing: border-box;
+			width: min(820px, 100%);
+			margin: 0 auto;
+			padding: 42px 48px;
+			color: white;
+			background-color: rgba(0, 0, 0, 0.82);
+			border: 1px solid rgba(255, 255, 255, 0.8);
+			border-radius: 12px;
+			box-shadow: 0 18px 50px rgba(0, 0, 0, 0.5);
+			font-size: 18px;
+			line-height: 1.65;
+		}
+
+		.books-page h1 {
+			margin: 0 0 20px;
+			font-size: clamp(32px, 5vw, 48px);
+			line-height: 1.1;
+		}
+
+		.books-introduction {
+			margin: 0 0 42px;
+			font-size: 1.05em;
+		}
+
+		.book-summary {
+			margin-top: 38px;
+		}
+
+		.book-summary h2 {
+			margin: 0 0 14px;
+			font-size: clamp(24px, 4vw, 32px);
+			line-height: 1.2;
+		}
+
+		.book-summary p {
+			margin: 0 0 1.15em;
+		}
+
+		.book-summary p:last-child {
+			margin-bottom: 0;
+		}
+
+		@media (max-width: 600px) {
+			.books-body {
+				padding: 76px 14px 24px;
+			}
+
+			.books-home {
+				top: 14px;
+				left: 14px;
+			}
+
+			.books-page {
+				padding: 30px 24px;
+				font-size: 16px;
+			}
+		}
+	</style>
 </head>
-<body>
-	<div class="bg bg1"></div>
+<body class="books-body">
+	<div class="bg bg1 is-active" aria-hidden="true"></div>
+	<div class="bg bg2" aria-hidden="true"></div>
 
-	<nav class="topnav">
+	<a href="index.html" class="panel books-home">← Home</a>
 
-<div>
-	<a href="#" class="panel">Philosophy</a>
-		<ul>
-			<li><a href="books.html" class="panel">Books</a></li>
-			<li><a href="#" class="panel">Outlines</a></li>
-			<li><a href="#" class="panel">Old Essays</a></li>
-			<li><a href="#" class="panel">LSAT/Law</a></li>
+	<main class="books-page">
+		<h1>Five Books</h1>
 
-		</ul>
+		<p class="books-introduction">These five interconnected books follow a deliberate conceptual sequence. Each develops the groundwork for the next, moving from temporality and subjectivity through political economy and postcolonial theory, and culminating in a theoretical memoir about race, trauma, and Indo-Fijian diasporic experience.</p>
 
-</div>
+		<section class="book-summary">
+			<h2>1. <em>Retrofuturism</em></h2>
+			<p><em>Retrofuturism</em> begins from the proposition that the past comes from the future. Emerging from my work on Kant and spontaneity, the book considers how the past is not simply left behind but continually constituted and transformed by the possibilities through which we approach it.</p>
+		</section>
 
-<div>
-	<a href="#" class="panel">Science</a>
-		<ul>
-			<li><a href="#" class="panel">Apps</a></li>
-			<li><a href="#" class="panel">Github</a></li>
-			<li><a href="#" class="panel">Misc.</a></li>
-		</ul>
+		<section class="book-summary">
+			<h2>2. <em>Death of the Phallus</em></h2>
+			<p><em>Death of the Phallus</em> is a rejoinder to Joan Copjec’s <em>Read My Desire: Lacan Against the Historicists</em>. It argues for the irreducible singularity of the self over and against the quasi-universality of the subject and language.</p>
+			<p>Taking up Derrida’s formulation—“I have only one language; it is not mine”—the book asks how a singular self inhabits a linguistic structure that precedes and exceeds it. In developing this problem, it defends important dimensions of Foucault’s project while reinterpreting Lacan and the political and emancipatory possibilities of psychoanalysis.</p>
+		</section>
 
-</div>
+		<section class="book-summary">
+			<h2>3. <em>Marx and His Readers</em></h2>
+			<p><em>Marx and His Readers</em> presents my interpretation of Marx, political economy, and the history of Marxist interpretation. It examines not only Marx’s work but also the competing traditions that have claimed, revised, and contested his intellectual legacy.</p>
+			<p>The book asks how Marx should be read today, how political economy constitutes social and political life, and how the history of Marxism has both clarified and obscured Marx’s original intervention.</p>
+		</section>
 
-<div>
-	<a href="#" class="panel">Art</a>
-		<ul>
-			<li><a href="#" class="panel">The Voice (Music)</a></li>
-			<li><a href="#" class="panel">The Gaze (Visual Arts)</a></li>
-			<li><a href="#" class="panel">The Scene (Games/Toys)</a></li>
-		</ul>
+		<section class="book-summary">
+			<h2>4. <em>The Other Jew</em></h2>
+			<p><em>The Other Jew</em> examines the Indian diaspora through the aporias of race, sovereignty, economy, and psychic life. It draws together the accounts of subjectivity and political economy developed in the preceding books.</p>
+			<p>The book asks how diasporic peoples are situated within inherited racial and political categories—and how those categories are themselves produced by particular conceptions of economy, sovereignty, and the psyche. It serves as a bridge between the theoretical arguments of the earlier books and the more personal investigation undertaken in <em>Indopessimism</em>.</p>
+		</section>
 
-</div>
+		<section class="book-summary">
+			<h2>5. <em>Indopessimism</em></h2>
+			<p><em>Indopessimism</em> is a theoretical memoir and a rejoinder to Frank Wilderson’s Afropessimism. It problematizes received conceptions of race, class, identity, subjectivity, and political engagement from an Indo-Fijian diasporic perspective.</p>
+			<p>The book proceeds along two intersecting tracks: nihilism, approached through Schopenhauer and Nietzsche, and trauma, approached through Freud and Lacan. Bringing philosophical argument into conversation with personal and inherited experience, <em>Indopessimism</em> asks what forms of political thought become possible when neither identity nor emancipation can be taken for granted.</p>
+		</section>
+	</main>
 
-
-
-	
-</nav>
-
-<main class="books-page">
-	<h1>Books</h1>
-	<ul class="book-list">
-		<li><a href="books/retrofuturism.html">Retrofuturism</a></li>
-		<li><a href="books/death-of-the-phallus.html">Death of the Phallus</a></li>
-		<li><a href="books/marx-and-his-readers.html">Marx and his Readers</a></li>
-		<li><a href="books/the-other-jew.html">The Other Jew</a></li>
-		<li><a href="books/indopessimism.html">Indopessimism</a></li>
-	</ul>
-</main>
+	<script src="scripts/background-slideshow.js?v=20260813-2"></script>
 </body>
 </html>
-
