@@ -45,8 +45,7 @@ body {
 .topnav {
 	position: absolute;
 	top: 45px;
-	left: 20%;
-	transform: translateX(-50%);
+	left: 45px;
 	display: flex;
 	gap: 40px;
 }
@@ -71,16 +70,18 @@ body {
 	font-size: 18px;
 }
 
-.blog {
-	position: absolute;
-	left: 45px;
-	bottom: 120px;
-}
-
-.mastodon {
+.community-links {
 	position: absolute;
 	left: 45px;
 	bottom: 45px;
+	display: flex;
+	gap: 6px;
+}
+
+.community-links .panel {
+	box-sizing: border-box;
+	padding: 10px 14px;
+	text-align: center;
 }
 
 .bottom {
@@ -89,7 +90,7 @@ body {
 	left: 50%;
 	transform: translateX(-50%);
 	display: flex;
-	gap: 35px;
+	gap: 10px;
 }
 
 .signature {
