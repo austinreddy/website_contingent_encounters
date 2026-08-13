@@ -109,6 +109,13 @@ body {
 	background-size: cover;
 	background-position: center;
 	z-index: -1;
+	opacity: 0;
+	transition: opacity 1.6s ease-in-out;
+	will-change: opacity;
+}
+
+.bg.is-active {
+	opacity: 1;
 }
 
 .bg1 {
@@ -117,14 +124,10 @@ body {
 
 .bg2 {
 	background-image: url("img/portrait.jpg");
-	opacity: 0;
-	animation: fadeInOut 8s infinite;
 }
 
-@keyframes fadeInOut {
-	0%	{ opacity: 0; }
-	40%	{ opacity: 1; }
-	60%	{ opacity: 1; }
-	100% { opacity: 0; }
-
+@media (prefers-reduced-motion: reduce) {
+	.bg {
+		transition: none;
+	}
 }
