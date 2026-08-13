@@ -131,3 +131,61 @@ body {
 		transition: none;
 	}
 }
+
+.about-body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 90px 24px 48px;
+	color: white;
+}
+
+.about-home {
+	position: fixed;
+	top: 24px;
+	left: 24px;
+	z-index: 2;
+}
+
+.about-page {
+	box-sizing: border-box;
+	width: min(760px, 100%);
+	margin: 0 auto;
+	padding: 42px 48px;
+	background: rgba(0, 0, 0, 0.72);
+	border: 1px solid rgba(255, 255, 255, 0.75);
+	border-radius: 12px;
+	box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+	backdrop-filter: blur(8px);
+	font-size: 18px;
+	line-height: 1.65;
+}
+
+.about-page h1 {
+	margin: 0 0 28px;
+	font-size: clamp(32px, 5vw, 48px);
+	line-height: 1.1;
+}
+
+.about-page p {
+	margin: 0 0 1.25em;
+}
+
+.about-page p:last-child {
+	margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+	.about-body {
+		padding: 76px 14px 24px;
+	}
+
+	.about-home {
+		top: 14px;
+		left: 14px;
+	}
+
+	.about-page {
+		padding: 30px 24px;
+		font-size: 16px;
+	}
+}
