@@ -36,6 +36,27 @@
 	margin: 0;
 }
 
+.document-list {
+	margin: 32px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.document-list a {
+	display: block;
+	padding: 18px 20px;
+	color: white;
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.55);
+	border-radius: 8px;
+	text-decoration: none;
+}
+
+.document-list a:hover,
+.document-list a:focus-visible {
+	background: rgba(255, 255, 255, 0.16);
+}
+
 @media (max-width: 600px) {
 	.section-body { padding: 76px 14px 24px; }
 	.section-home { top: 14px; left: 14px; }
