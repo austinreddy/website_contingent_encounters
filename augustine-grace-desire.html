@@ -45,21 +45,28 @@
 			gap: 8px;
 		}
 
-		.pdf-reader-frame {
-			display: block;
-			width: 100%;
-			height: calc(100vh - 175px);
-			min-height: 600px;
-			border: 0;
+		.pdf-pages {
+			display: grid;
+			gap: 18px;
+			padding: 18px;
+			background: #35383b;
 			border-radius: 8px;
-			background: #525659;
+		}
+
+		.pdf-page {
+			display: block;
+			width: min(100%, 850px);
+			height: auto;
+			margin: 0 auto;
+			background: white;
+			box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
 		}
 
 		@media (max-width: 700px) {
 			.pdf-reader-body { padding: 10px; }
 			.pdf-reader-page { padding: 16px; }
 			.pdf-reader-header { align-items: flex-start; flex-direction: column; }
-			.pdf-reader-frame { height: 72vh; min-height: 450px; }
+			.pdf-pages { gap: 10px; padding: 8px; }
 		}
 	</style>
 </head>
@@ -76,7 +83,26 @@
 			</div>
 		</header>
 
-		<iframe class="pdf-reader-frame" src="pdfs/on-the-perfection-of-grace-and-desire-in-the-soul.pdf#view=FitH" title="On the Perfection of Grace and Desire in the Soul PDF"></iframe>
+		<div class="pdf-pages" aria-label="On the Perfection of Grace and Desire in the Soul, 18 pages">
+			<img class="pdf-page" src="img/documents/augustine-grace-desire/page-01.jpg" alt="Page 1 of 18" width="1275" height="1650">
+			<img class="pdf-page" src="img/documents/augustine-grace-desire/page-02.jpg" alt="Page 2 of 18" width="1275" height="1650" loading="lazy">
+			<img class="pdf-page" src="img/documents/augustine-grace-desire/page-03.jpg" alt="Page 3 of 18" width="1275" height="1650" loading="lazy">
+			<img class="pdf-page" src="img/documents/augustine-grace-desire/page-04.jpg" alt="Page 4 of 18" width="1275" height="1650" loading="lazy">
+			<img class="pdf-page" src="img/documents/augustine-grace-desire/page-05.jpg" alt="Page 5 of 18" width="1275" height="1650" loading="lazy">
+			<img class="pdf-page" src="img/documents/augustine-grace-desire/page-06.jpg" alt="Page 6 of 18" width="1275" height="1650" loading="lazy">
+			<img class="pdf-page" src="img/documents/augustine-grace-desire/page-07.jpg" alt="Page 7 of 18" width="1275" height="1650" loading="lazy">
+			<img class="pdf-page" src="img/documents/augustine-grace-desire/page-08.jpg" alt="Page 8 of 18" width="1275" height="1650" loading="lazy">
+			<img class="pdf-page" src="img/documents/augustine-grace-desire/page-09.jpg" alt="Page 9 of 18" width="1275" height="1650" loading="lazy">
+			<img class="pdf-page" src="img/documents/augustine-grace-desire/page-10.jpg" alt="Page 10 of 18" width="1275" height="1650" loading="lazy">
+			<img class="pdf-page" src="img/documents/augustine-grace-desire/page-11.jpg" alt="Page 11 of 18" width="1275" height="1650" loading="lazy">
+			<img class="pdf-page" src="img/documents/augustine-grace-desire/page-12.jpg" alt="Page 12 of 18" width="1275" height="1650" loading="lazy">
+			<img class="pdf-page" src="img/documents/augustine-grace-desire/page-13.jpg" alt="Page 13 of 18" width="1275" height="1650" loading="lazy">
+			<img class="pdf-page" src="img/documents/augustine-grace-desire/page-14.jpg" alt="Page 14 of 18" width="1275" height="1650" loading="lazy">
+			<img class="pdf-page" src="img/documents/augustine-grace-desire/page-15.jpg" alt="Page 15 of 18" width="1275" height="1650" loading="lazy">
+			<img class="pdf-page" src="img/documents/augustine-grace-desire/page-16.jpg" alt="Page 16 of 18" width="1275" height="1650" loading="lazy">
+			<img class="pdf-page" src="img/documents/augustine-grace-desire/page-17.jpg" alt="Page 17 of 18" width="1275" height="1650" loading="lazy">
+			<img class="pdf-page" src="img/documents/augustine-grace-desire/page-18.jpg" alt="Page 18 of 18" width="1275" height="1650" loading="lazy">
+		</div>
 	</main>
 
 	<script src="scripts/background-slideshow.js?v=20260813-2"></script>
